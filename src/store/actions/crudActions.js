@@ -20,11 +20,13 @@ export const AddUser =
     };
 
 export const updateUser =
-    ({ id, age }) =>
+    ({ id, age, name }) =>
     async (dispatch) => {
+        console.log(id, age, name);
         try {
             await firestore.collection("users").doc(id).update({
                 age,
+                name,
             });
         } catch (error) {
             console.error("Error updating user:", error);

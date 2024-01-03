@@ -9,7 +9,7 @@ const userReducer = (state = initialState, action) => {
                 ...state,
                 users: action.payload,
             };
-        case "AddUser":
+        case "AddUser": 
             return {
                 ...state,
                 users: [...state.users, action.payload],
